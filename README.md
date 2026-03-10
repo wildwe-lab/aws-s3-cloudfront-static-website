@@ -1,8 +1,9 @@
-# aws-s3-cloudfront-static-website
-I have created a static website using cloud front
-first a created the index.html code and collected photos i need from google
-then i created S3 bucket, kept all acess block in bucket so all access can through cloudfront 
-uploaded the index page along with photos
-then moved to cloudfront and created distributions by choosing the free plan 
-then attached the s3 bucket to the distributions and deployed the page
-used the link in domin name to view the page
+I created a static website using Amazon S3 and CloudFront.
+First, I created the HTML page (index.html) and got the images I wanted from google  to display on the website.
+Then I created an S3 bucket and kept the "Block all public access" setting enabled so that the content can only be accessed through CloudFront.
+After that, I uploaded the website files (index.html and images) to the S3 bucket.
+Next, I created a CloudFront distribution and selected the S3 bucket as the origin.
+I configured Origin Access Control (OAC) to allow CloudFront to securely access the S3 bucket.
+Then I added the required bucket policy to allow CloudFront to retrieve the objects from the bucket.
+Finally, I set the default root object to index.html and deployed the distribution.
+After the deployment was completed, I used the CloudFront domain name URL to access the website
